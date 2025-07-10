@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Loader2 } from "lucide-react"
-import ReactMarkdown from "react-markdown"
 
 interface FormData {
   topic: string
@@ -183,7 +182,7 @@ export default function Home() {
 
               {response && !isLoading && (
                 <div className="bg-gray-50 rounded-md p-4">
-                  <ReactMarkdown>{response}</ReactMarkdown>
+                  <Textarea value={response} readOnly className="min-h-[300px] bg-white border-gray-200 resize-none" />
                 </div>
               )}
 
